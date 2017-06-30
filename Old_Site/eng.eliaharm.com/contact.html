@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">	
+	
+	<head>		
+		
+		<meta charset="utf-8">
+		<title>Elia Harmouche - Customized Software Developer</title>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script src="js/hover.js"></script>
+		<script src="js/contact-form-process.js"></script>
+		<link rel="stylesheet" href="style.css" />
+		
+		<!--[if IE 6]>
+            <script src="js/ie6-transparency.js"></script>
+            <script>DD_belatedPNG.fix('#header h1 a, #header h2');</script>
+            <link rel="stylesheet" type="text/css" href="styles/ie6.css" />
+            <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE7.js"></script>
+        <![endif]--> 
+        <!--[if IE 7]>
+            <link rel="stylesheet" type="text/css" href="styles/ie7.css" />
+        <![endif]-->		        
+	<script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30601900-1']);
+  _gaq.push(['_setDomainName', 'eliaharm.com']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
+ 	
+	</head>
+	
+	<body>	
+		<div id="wrap">	
+			
+			<div id="header">
+			
+				<h1><a href="www.eliaharm.com">Elia Harmouche</a></h1>
+				<h2>Computer Engineer</h2>
+			
+			</div><!--end header-->
+			
+			<ul id="nav">
+			
+				<li><a href="index.html" class="first">Home</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="services.html">Services</a>
+					<ul>
+						<li><a href="#">Logo/Branding</a></li>
+						<li><a href="#">Online Marketing</a></li>
+						<li><a href="#">SEO</a></li>
+						<li><a href="#">Web Design</a></li>						
+					</ul>
+				</li>
+				<li><a href="articles.html">Articles</a></li>
+				<li><a href="contact.html" class="current">Contact</a></li>
+			
+			</ul><!--end nav-->
+			
+			<div class="line"></div>
+			
+			<div id="contact-page">
+			
+				<h2 class="page-title">Contact</h2>    		
+	    		<p>Please get in touch with me using the form below if you have any questions or would like to discuss the possibility of hiring me for some work.</p>
+				<p class='hide' id='response'></p>
+				
+				<form id='contact-form' method='post' action='scripts/contact-process.php'>
+					<fieldset>					
+						<input id='form_name' type='text' name='name' value='Name' onFocus="if(this.value=='Name'){this.value=''};" onBlur="if(this.value==''){this.value='Name'};" />					
+						<input id='form_email' type='text' name='email' value="Email" onFocus="if(this.value=='Email'){this.value=''};" onBlur="if(this.value==''){this.value='Email'};" />
+						<input id='form_subject' type='text' name='subject' value="Subject" onFocus="if(this.value=='Subject'){this.value=''};" onBlur="if(this.value==''){this.value='Subject'};" />			
+						<textarea id='form_message' rows='10' cols='40' name='message'></textarea>				
+						<input id='form_submit' class="submit" type='submit' name='submit' value='' />			
+						<div class='hide'>
+							<label>Do not fill out this field</label>
+							<input name='spam_check' type='text' value='' />
+						</div>
+					</fieldset>
+				</form>
+			
+			</div><!--end contact-page-->
+			
+        	<div id="sidebar">
+        	       	
+				<h3>Email</h3>
+    			<p>eliaharm@gmaill.com</p>    
+    			<h3>Phone</h3>
+    			<p>00 961 3 122740</p>    
+    			<h3>Website</h3>
+    			<p>www.eliaharm.com</p>    
+    			<h3>Address</h3>
+   			  <p>Bitar Bldg, 1th fl., Haret el mir<br/>
+   			    Zouk Mikael, Kesrwan<br/> Lebanon</p> 
+        	
+        	</div><!--end sidebar-->
+			
+			<div id="footer">
+            	<div class="line"></div>
+				<p class="copyright">Copyright &copy; 2011 / Elia Harmouche / All Rights Reserved</p>
+			</div><!--end footer-->
+		
+		</div><!--end wrap-->	
+		<div class="cache-images">
+	        <img src="images/submit-button-orange-hover.jpg" width="0" height="0" alt="" />
+	    </div><!--end cache-images-->
+	</body>
+</html>
