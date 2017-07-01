@@ -56,6 +56,7 @@
 
     <div id="lead">
         <div id="lead-content">
+            <img class="img-circle" src="photos\My_Head5_L.png">
             <h1>Elia Harmouche</h1>
             <h2>Computer Engineer<br/>Amateur Photographer</h2>
             <!--
@@ -424,7 +425,7 @@ Oracle developer at the department of IT development. My task was to expand the 
             event = event || window.event;
             var target = event.target || event.srcElement,
                 link = target.src ? target.parentNode : target,
-                options = {index: link, event: event},
+                options = {index: link, event: event,stretchImages: true,carousel: true,slideshowInterval: 4000},
                 links = this.getElementsByTagName('a');
             blueimp.Gallery(links, options);
         };
