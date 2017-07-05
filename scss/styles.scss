@@ -51,6 +51,13 @@ $text: #74808a;
     padding: 3px;
 }
 
+@media print
+{    
+    .e-no-print
+    {
+        display: none !important;
+    }
+}
 
 /*
     ---------------------
