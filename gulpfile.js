@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
+var htmlmin = require('gulp-htmlmin');
 
 gulp.task('scripts', function() {
     return gulp.src('js/scripts.js')
@@ -33,7 +34,15 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('css'));
 });
 
+gulp.task('minify', function() {
+  return gulp.src('src/*.html')
+    .pipe(htmlmin({collapseWhitespace: true,removeComments: true}))
+    .pipe(gulp.dest('./'));
+});
+
 gulp.task('watch', ['scripts', 'styles'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
+    gulp.watch('src/*.html', ['minify']);
 });
+
