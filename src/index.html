@@ -77,16 +77,17 @@
     <!-- End #lead -->
 <script>
     $(document).ready(function() {
-    $(window).hashchange( function(){
-        /*
-    var hash = location.hash;
-    var lc1 = $("#link1")
-    if (lc1.attr('href') === hash) {document.getElementById('box1').style.left='200px';}
-    if (lc1.attr('href') !== hash) {document.getElementById('box1').style.left='0px';}
-    */
+    $(window).on("navigate", function (event, data) {
+  var direction = data.state.direction;
+  if (direction == 'back') {
+    // do something
     gallery.close();
-    });
-    $(window).hashchange();
+  }
+  if (direction == 'forward') {
+    // do something else
+    gallery.close();
+  }
+});
 });
 </script>
     <div id="about1" class="optional-section">
