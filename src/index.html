@@ -74,22 +74,6 @@
         </div>
         <!-- End #lead-down -->
     </div>
-    <!-- End #lead -->
-<script>
-    $(document).ready(function() {
-    $(window).on("navigate", function (event, data) {
-  var direction = data.state.direction;
-  if (direction == 'back') {
-    // do something
-    gallery.close();
-  }
-  if (direction == 'forward') {
-    // do something else
-    gallery.close();
-  }
-});
-});
-</script>
     <div id="about1" class="optional-section">
         <div class="container">
             <div class="row">
@@ -384,7 +368,7 @@
             <div class="row">
                 <div class="col-sm-5 copyright">
                     <p>
-                        Copyright &copy; 2017.2 Elia Harmouche
+                        Copyright &copy; 2017.3 Elia Harmouche
                     </p>
                 </div>
                 <div class="col-sm-2 top">
@@ -429,15 +413,57 @@
     <!-- Elia Additional scripts -->
     <script src="js/blueimp-gallery.min.js"></script>
     <script>
+        var gallery
         document.getElementById('links').onclick = function (event) {
             event = event || window.event;
             var target = event.target || event.srcElement,
                 link = target.src ? target.parentNode : target,
-                options = {index: link, event: event,stretchImages: true,carousel: true,slideshowInterval: 4000},
+                options = {index: link, event: event,stretchImages: true,carousel: true,slideshowInterval: 4000,onopen: GalOpen,onclosed: GalClosed,closeOnEscape: true},
                 links = this.getElementsByTagName('a');
-            blueimp.Gallery(links, options);
+            gallery = blueimp.Gallery(links, options);
         };
-    </script>
+        // Elia added
+        function GalOpen(){
+            // Gallery open event handler
+            var v_galery = 'running'; 
+            location.hash = v_galery;
+            //window.alert('location.hash = galery');
+            console.log('location.hash changed to on open '+location.hash);
+        };
+        function GalClosed(){
+            // Gallery open event handler
+            var v_galery = '';  
+            location.hash = v_galery;
+            //window.alert('location.hash = galery');
+            console.log('location.hash changed to on closed '+location.hash);
+        };
+        window.onhashchange = function() {  
+            console.log('location.hash onhashchange '+location.hash); 
+            if (location.hash !== '#running') {   
+                gallery.close();
+                console.log('gallery.close();');
+            }  
+        }
+
+</script>
+
+    <!-- disable back -->
+<script>
+    $(document).ready(function() {
+    $(window).on("navigate", function (event, data) {
+  var direction = data.state.direction;
+  if (direction == 'back') {
+    // do something
+    gallery.close();
+    window.alert('gallery.close();');
+  }
+  if (direction == 'forward') {
+    // do something else
+    gallery.close();
+  }
+});
+});
+</script>
 </body>
 
 </html>
