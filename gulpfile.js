@@ -40,9 +40,12 @@ gulp.task('minify', function() {
     .pipe(gulp.dest('./'));
 });
 
-gulp.task('watch', ['scripts', 'styles'], function() {
+gulp.task('watch', ['scripts', 'styles', 'minify'], function() {
     gulp.watch('js/*.js', ['scripts']);
     gulp.watch('scss/*.scss', ['styles']);
     gulp.watch('src/*.html', ['minify']);
 });
+
+
+gulp.task('build', ['scripts', 'styles', 'minify']);
 

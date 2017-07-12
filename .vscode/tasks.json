@@ -5,7 +5,7 @@
   "tasks": [
     {
       "type": "gulp",
-      "task": "watch",
+      "task": "build",
       "group": {
         "kind": "build",
         "isDefault": true
