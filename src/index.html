@@ -418,7 +418,7 @@
             event = event || window.event;
             var target = event.target || event.srcElement,
                 link = target.src ? target.parentNode : target,
-                options = {index: link, event: event,stretchImages: true,carousel: true,slideshowInterval: 4000,onopen: GalOpen,onclosed: GalClosed,closeOnEscape: true},
+                options = {index: link, event: event,stretchImages: true,carousel: true,slideshowInterval: 4000,onopen: GalOpen,onclose: GalClose,closeOnEscape: true},
                 links = this.getElementsByTagName('a');
             gallery = blueimp.Gallery(links, options);
         };
@@ -428,14 +428,14 @@
             var v_galery = 'running'; 
             location.hash = v_galery;
             //window.alert('location.hash = galery');
-            console.log('location.hash changed to on open '+location.hash);
+            console.log('location.hash changed on open to: '+location.hash);
         };
-        function GalClosed(){
+        function GalClose(){
             // Gallery open event handler
             var v_galery = '';  
             location.hash = v_galery;
             //window.alert('location.hash = galery');
-            console.log('location.hash changed to on closed '+location.hash);
+            console.log('location.hash changed on close to: '+location.hash);
         };
         window.onhashchange = function() {  
             console.log('location.hash onhashchange '+location.hash); 
