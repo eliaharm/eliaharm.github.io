@@ -14,7 +14,7 @@ brunch watch --server
 
 brunch build --production
 
-git subtree push --prefix public origin gh-pages
+git subtree push --prefix public origin gh-pages2
 ```
 disregard error message, bug, update brunch later
 
