@@ -1,23 +1,20 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
+  "name": "eliaharm-vite",
   "private": true,
-  "author": "Brunch",
-  "version": "0.0.1",
-  "repository": "",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "brunch watch --server",
-    "build": "brunch build --production"
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "dependencies": {},
   "devDependencies": {
-    "auto-reload-brunch": "^2",
-    "babel-brunch": "~6.0",
-    "babel-preset-latest": "^6",
-    "brunch": "^2",
-    "clean-css-brunch": "^2",
-    "html-pages-brunch": "^2.8.0",
-    "sass-brunch": "^3.0.0",
-    "uglify-js-brunch": "^2"
+    "sass": "^1.62.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "@fontsource/fira-sans": "^5.0.1",
+    "jquery": "^3.7.0"
   }
 }
