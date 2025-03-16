@@ -308,3 +308,80 @@ nav,
   border: 3px solid var(--accent-color);
   box-shadow: 0 4px 6px var(--shadow);
 }
+/* Enhanced print styles */
+@media print {
+  body {
+    padding: 0.5rem;
+    font-size: 9pt; /* Slightly smaller font to fit more content */
+    max-width: 100%;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+
+  .cv-container {
+    display: grid;
+    grid-template-columns: 30% 70%; /* Maintain the same proportion as in HTML */
+    gap: 1rem;
+    print-color-adjust: exact;
+  }
+
+  /* Fix page break issues */
+  .experience-item,
+  .project-item,
+  .education-item,
+  .certification-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Prevent headings from being printed at the bottom of a page */
+  h3,
+  h4 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Keep related content together */
+  .header-container {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Ensure the header stays on first page */
+  .profile-photo-container,
+  h1,
+  h2,
+  .contact-info {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+
+  /* Adjust column padding for print */
+  .left-column {
+    background-color: var(--section-bg) !important;
+    padding: 0.75rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+  }
+
+  .experience-item,
+  .project-item {
+    padding: 0.75rem;
+    background-color: var(--section-bg) !important;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px var(--shadow);
+    margin-bottom: 1rem;
+  }
+
+  /* Add explicit page break control if needed */
+  .right-column {
+    page-break-before: auto !important;
+  }
+
+  /* Add optional class that you can add to force page breaks manually if needed */
+  .page-break {
+    page-break-before: always !important;
+    break-before: page !important;
+  }
+}
