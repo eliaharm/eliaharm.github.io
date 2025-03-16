@@ -1,6 +1,10 @@
 <div class="cv-container">
 <div class="header-container">
 
+<div class="profile-photo-container">
+<img src="Nothing-OS-3.0-1170x658.webp" alt="Jane Doe" class="profile-photo">
+</div>
+
 # Jane Doe
 
 ## Senior Software Architect
@@ -25,99 +29,99 @@ Innovative Software Architect with 12+ years of experience designing and impleme
 <div class="skill-item">
 <span class="skill-name">System Architecture</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">Cloud Services (AWS/Azure)</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">Microservices</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">DevOps/CI/CD</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-empty">☆</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-empty">&#9734;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">Java/Spring</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">Node.js/TypeScript</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-empty">☆</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-empty">&#9734;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">SQL/NoSQL Databases</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-empty">☆</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-empty">&#9734;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">Docker/Kubernetes</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-empty">☆</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-empty">&#9734;</span>
 </span>
 </div>
 
 <div class="skill-item">
 <span class="skill-name">API Design/REST/GraphQL</span>
 <span class="stars">
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
-<span class="star star-filled">★</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
+<span class="star star-filled">&#9733;</span>
 </span>
 </div>
 
