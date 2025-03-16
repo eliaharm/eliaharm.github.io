@@ -1,6 +1,4 @@
-/* Modern CV CSS */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@400;500;600;700&display=swap");
 :root {
   --primary-color: #2c3e50;
   --secondary-color: #3498db;
@@ -11,46 +9,75 @@
   --section-bg: #f9f9f9;
   --divider: #ecf0f1;
   --shadow: rgba(0, 0, 0, 0.05);
+  --star-filled: #f1c40f;
+  --star-empty: #ecf0f1;
 }
 
-* {
+ {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background);
-  max-width: 800px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 2rem;
 }
-
+/* Two-column layout */
+.cv-container {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 2rem;
+}
+.left-column {
+  background-color: var(--section-bg);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px var(--shadow);
+}
+.right-column {
+  padding: 0;
+}
+/* Remove auto-generated Table of Contents */
+[role="doc-toc"] {
+  display: none;
+}
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Poppins', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
 }
-
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  text-align: center;
   margin-bottom: 0.25rem;
+  grid-column: 1 / -1;
+  text-align: center;
 }
-
 h2 {
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--secondary-color);
+  grid-column: 1 / -1;
   text-align: center;
   margin-bottom: 1.5rem;
 }
-
+.header-container {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-bottom: 2rem;
+}
 h3 {
   font-size: 1.3rem;
   font-weight: 600;
@@ -59,7 +86,9 @@ h3 {
   margin-top: 1.5rem;
   margin-bottom: 1rem;
 }
-
+.left-column h3 {
+  margin-top: 0;
+}
 h4 {
   font-size: 1.1rem;
   font-weight: 600;
@@ -67,184 +96,202 @@ h4 {
   justify-content: space-between;
   margin-bottom: 0.25rem;
 }
-
 h4 em {
   font-weight: 400;
   font-style: normal;
   font-size: 0.9rem;
   color: var(--light-text);
 }
-
 p {
   margin-bottom: 1rem;
 }
-
 /* Links */
 a {
   color: var(--secondary-color);
   text-decoration: none;
   transition: color 0.2s ease;
 }
-
 a:hover {
   color: var(--accent-color);
   text-decoration: underline;
 }
-
 /* Contact Info */
-h1 + p {
+.contact-info {
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
   margin-bottom: 1.5rem;
+  grid-column: 1 / -1;
 }
-
 /* Horizontal Rule */
 hr {
-  border: 0;
-  height: 1px;
-  background-color: var(--divider);
-  margin: 1.5rem 0;
+  display: none;
 }
-
 /* Lists */
 ul {
   list-style-type: none;
   padding-left: 0;
   margin-bottom: 1.5rem;
 }
-
 ul li {
   margin-bottom: 0.5rem;
 }
-
-/* Skills section */
-ul.skills {
+/* Skills section with star ratings */
+.skill-item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
 }
-
-ul.skills li {
-  background-color: var(--section-bg);
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 4px var(--shadow);
+.skill-name {
+  font-weight: 500;
 }
-
+.stars {
+  display: flex;
+  gap: 2px;
+}
+.star {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+}
+.star-filled {
+  color: var(--star-filled);
+}
+.star-empty {
+  color: var(--star-empty);
+}
 /* Work Experience & Projects */
-.experience-item, .project-item {
+.experience-item,
+.project-item {
   margin-bottom: 1.5rem;
   padding: 1rem;
   background-color: var(--section-bg);
   border-radius: 8px;
   box-shadow: 0 4px 6px var(--shadow);
 }
-
-.experience-item h4, .project-item h4 {
+.experience-item h4,
+.project-item h4 {
   margin-top: 0;
 }
-
-.experience-item ul, .project-item ul {
+.experience-item ul,
+.project-item ul {
   padding-left: 1.25rem;
   list-style-type: disc;
 }
-
 /* Education & Certifications */
-.education, .certifications {
-  margin-bottom: 1.5rem;
-}
-
-.education-item, .certification-item {
+.education-item,
+.certification-item {
   margin-bottom: 1rem;
 }
-
 /* Media Queries */
 @media print {
   body {
-    padding: 0;
-    font-size: 12pt;
+    padding: 0.5rem;
+    font-size: 10pt;
   }
-  
-  .experience-item, .project-item {
+  .cv-container {
+    gap: 1rem;
+  }
+  .experience-item,
+  .project-item {
+    padding: 0.75rem;
     break-inside: avoid;
     page-break-inside: avoid;
   }
-}
-
-@media (max-width: 768px) {
-  body {
+  .left-column {
     padding: 1rem;
   }
-  
   h1 {
     font-size: 2rem;
   }
-  
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+  }
+  body {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
   h2 {
     font-size: 1.3rem;
   }
 }
-
 /* Convert markdown list structure to our custom styling */
 ul:not(ul ul) {
   margin-left: 0;
 }
-
-ul:not(.skills) li {
+.right-column ul li {
   position: relative;
   padding-left: 1.25rem;
 }
-
-ul:not(.skills) li::before {
+.right-column ul li::before {
   content: "•";
   position: absolute;
   left: 0;
   color: var(--accent-color);
 }
-
-/* Fix for contact info at the top */
-p:nth-of-type(1) {
-  text-align: center;
+/* Language proficiency styling */
+.language-item {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
 }
-
-/* Skills formatting */
-h3 + ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+/* Fix for any other elements that need tweaking */
+img[src$="#star"] {
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
 }
-
-h3 + ul li {
-  background-color: var(--section-bg);
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 4px var(--shadow);
-}
-
-/* Adjust the skills section */
-h3:contains("Skills") + ul li {
-  padding-left: 0;
-}
-
-h3:contains("Skills") + ul li::before {
-  content: none;
-}
-
 /* Print optimization */
 @media print {
   body {
     padding: 0;
-    font-size: 11pt;
+    font-size: 9pt;
     max-width: 100%;
   }
-  
   a {
     color: var(--text-color);
     text-decoration: none;
   }
+  .cv-container {
+    gap: 1rem;
+  }
+  .left-column,
+  .experience-item,
+  .project-item {
+    box-shadow: none;
+  }
+}
+/* Custom classes for the structure we'll add via JS */
+.name-title-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.contact-info {
+  margin-bottom: 2rem;
+}
+/* Remove Table of Contents that some Markdown renderers add */
+nav,
+[role="navigation"],
+.toc,
+#toc,
+.table-of-contents {
+  display: none !important;
 }

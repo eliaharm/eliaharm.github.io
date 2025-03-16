@@ -1,9 +1,15 @@
+<div class="cv-container">
+<div class="header-container">
 # Sarah Johnson
 
 ## Senior Software Developer
 
-[sarah.johnson@email.com](mailto:sarah.johnson@email.com) | [github.com/sarahjohnson](https://github.com/sarahjohnson) | [linkedin.com/in/sarahjohnson](https://linkedin.com/in/sarahjohnson) | (555) 123-4567 | San Francisco, CA
+<div class="contact-info">
 
+[sarah.johnson@email.com](mailto:sarah.johnson@email.com) | [github.com/sarahjohnson](https://github.com/sarahjohnson) | [linkedin.com/in/sarahjohnson](https://linkedin.com/in/sarahjohnson) | (555) 123-4567 | San Francisco, CA
+</div>
+</div>
+<div class="left-column">
 ---
 
 ### Summary
@@ -13,6 +19,11 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 ---
 
 ### Skills
+
+<div class="skill-item">
+<span class="skill-name">JavaScript/TypeScript</span>
+<span class="stars">★★★★★</span>
+</div>
 
 - **Languages**: JavaScript (ES6+), TypeScript, Python, SQL, HTML5, CSS3
 - **Frameworks/Libraries**: React, Redux, Node.js, Express, Next.js, Jest, Mocha
@@ -24,7 +35,8 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 
 ### Work Experience
 
-#### **Senior Software Developer** | TechInnovate Inc.
+#### **Senior Software Developer** | TechInnovate Inc
+
 *June 2022 - Present*
 
 - Lead development of a microservices-based e-commerce platform serving 1M+ users
@@ -34,6 +46,7 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 - Collaborated with UX designers to implement responsive, accessible user interfaces
 
 #### **Software Developer** | Digital Solutions Group
+
 *August 2019 - May 2022*
 
 - Developed and maintained multiple React applications for enterprise clients
@@ -43,6 +56,7 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 - Contributed to migration from monolith to microservices architecture
 
 #### **Junior Developer** | StartUp Ventures
+
 *March 2018 - July 2019*
 
 - Built and deployed features for a financial technology web application
@@ -55,6 +69,7 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 ### Projects
 
 #### **Open Source Contributor** | React Component Library
+
 *2021 - Present*
 
 - Contributed to widely-used open-source React component library
@@ -62,6 +77,7 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 - Created comprehensive documentation and examples
 
 #### **Personal Project** | TaskMaster
+
 *2020*
 
 - Developed full-stack task management application using MERN stack
@@ -73,6 +89,7 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 ### Education
 
 #### **Master of Science in Computer Science**
+
 *University of California, Berkeley*
 *2016 - 2018*
 
@@ -80,6 +97,7 @@ Experienced software developer with 7+ years of expertise in full-stack developm
 - Thesis: "Optimizing React Applications for Performance"
 
 #### **Bachelor of Science in Computer Engineering**
+
 *Stanford University*
 *2012 - 2016*
 
