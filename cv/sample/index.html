@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Dev CV</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="styling.css" />
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#awesome-ldap" id="toc-awesome-ldap">Awesome LDAP</a>
+<ul>
+<li><a href="#ldapsearch" id="toc-ldapsearch">ldapsearch</a></li>
+<li><a href="#ldap-implementations" id="toc-ldap-implementations">LDAP
+Implementations</a>
+<ul>
+<li><a href="#suites" id="toc-suites">Suites</a></li>
+<li><a href="#containers" id="toc-containers">Containers</a></li>
+<li><a href="#kubernetes" id="toc-kubernetes">Kubernetes</a></li>
+</ul></li>
+<li><a href="#hosted-ldapldap-in-the-cloud"
+id="toc-hosted-ldapldap-in-the-cloud">Hosted LDAP/LDAP in the
+Cloud</a></li>
+<li><a href="#ldap-clients-tools-and-utilities"
+id="toc-ldap-clients-tools-and-utilities">LDAP Clients, Tools and
+Utilities</a></li>
+<li><a href="#ldap-pentesting" id="toc-ldap-pentesting">LDAP +
+Pentesting</a>
+<ul>
+<li><a href="#nse-scripts" id="toc-nse-scripts">NSE Scripts</a></li>
+</ul></li>
+<li><a href="#ldif" id="toc-ldif">LDIF</a></li>
+<li><a href="#rfcs" id="toc-rfcs">RFCs</a></li>
+<li><a href="#terminology" id="toc-terminology">Terminology</a></li>
+<li><a href="#other-awesome-lists" id="toc-other-awesome-lists">Other
+Awesome Lists</a></li>
+<li><a href="#books" id="toc-books">Books</a></li>
+<li><a href="#conferences-and-education"
+id="toc-conferences-and-education">Conferences and Education</a></li>
+<li><a href="#community-support-channels"
+id="toc-community-support-channels">Community Support Channels</a></li>
+<li><a href="#troubleshooting"
+id="toc-troubleshooting">Troubleshooting</a>
+<ul>
+<li><a href="#ldap-servers" id="toc-ldap-servers">LDAP Servers</a></li>
+<li><a href="#guides-articles-papers-walkthroughs"
+id="toc-guides-articles-papers-walkthroughs">Guides, Articles, Papers
+Walkthroughs</a></li>
+</ul></li>
+<li><a href="#courses" id="toc-courses">Courses</a>
+<ul>
+<li><a href="#notes-from-the-field" id="toc-notes-from-the-field">Notes
+from the Field</a></li>
+<li><a href="#vendor-documentation" id="toc-vendor-documentation">Vendor
+Documentation</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="awesome-ldap">Awesome LDAP</h1>
+<blockquote>
+<p>Useful resources for learning more about and using LDAP whether you
+are a developer, pentester, network defender or something else cool!</p>
+</blockquote>
+<p><a href="https://gitlab.com/brie/awesome-ldap/-/commits/main"><img
+src="https://gitlab.com/brie/awesome-ldap/badges/main/pipeline.svg"
+alt="pipeline status" /></a></p>
+<ul>
+<li><p>View: <a
+href="https://brie.gitlab.io/awesome-ldap/">https://brie.gitlab.io/awesome-ldap/</a></p></li>
+<li><p>Contribute: <a
+href="https://gitlab.com/brie/awesome-ldap">https://gitlab.com/brie/awesome-ldap</a></p></li>
+</ul>
+<p>My objective is to make this a useful resource for people with
+varying levels of experience with LDAP. Do not hesitate to suggest good
+quality introductory material.</p>
+<h2 id="ldapsearch">ldapsearch</h2>
+<blockquote>
+<p>The best write-ups and references for our friend:
+<code>ldapsearch</code>!</p>
+</blockquote>
+<ul>
+<li><a
+href="https://malicious.link/post/2022/ldapsearch-reference/">ldapsearch
+reference</a></li>
+</ul>
+<h2 id="ldap-implementations">LDAP Implementations</h2>
+<ul>
+<li><a
+href="https://www.openidentityplatform.org/opendj">OpenDJ</a></li>
+<li><a href="https://www.openldap.org/">OpenLDAP</a></li>
+<li><a href="https://directory.fedoraproject.org/">389
+Directory</a></li>
+<li><a href="https://github.com/erthink/ReOpenLDAP">ReOpenLDAP</a> - A
+production-ready replacement for OpenLDAP</li>
+</ul>
+<h3 id="suites">Suites</h3>
+<ul>
+<li><a href="https://www.freeipa.org/page/Main_Page">FreeIPA</a> - An
+integrated security information management solution that includes 389
+Directory Server</li>
+<li><a href="https://www.gluu.org/">Gluu</a></li>
+<li><a href="https://www.keycloak.org/">Keycloak</a> - Open Source
+Identity and Access Management</li>
+</ul>
+<h3 id="containers">Containers</h3>
+<ul>
+<li><a
+href="https://hub.docker.com/r/osixia/openldap/">osixia/openldap</a> -
+One of the most recommended OpenLDAP containers</li>
+<li><a
+href="https://hub.docker.com/r/osixia/phpldapadmin/">osixia/phpldapadmin</a>
+- A great companion to the container above! This <a
+href="https://scytalelabs.com/setup-and-configure-openldap-using-docker-image-on-ubuntu-16-04/">guide</a>
+walks you through configuring them together. It uses Ubuntu 16.04 so use
+for legacy purposes.</li>
+<li><a href="https://therubyist.org/2020/04/03/ldap-in-containers/">LDAP
+in containers</a> blog post from
+<code>https://therubyist.org</code>.</li>
+</ul>
+<h3 id="kubernetes">Kubernetes</h3>
+<ul>
+<li><a href="https://github.com/jp-gouin/helm-openldap">OpenLDAP Helm
+Chart</a> - using the <a
+href="https://github.com/osixia/docker-openldap">osixia/docker-openldap</a>
+container</li>
+<li><a
+href="https://docs.bitnami.com/tutorials/create-openldap-server-kubernetes/">Create
+An OpenLDAP server with Bitnami Containers on Kubernetes</a></li>
+<li><a
+href="https://www.talkingquickly.co.uk/installing-openldap-kubernetes-helm">Installing
+OpenLDAP on Kubernetes with Helm</a> -</li>
+</ul>
+<h2 id="hosted-ldapldap-in-the-cloud">Hosted LDAP/LDAP in the Cloud</h2>
+<ul>
+<li>Azure Active Directory
+<ul>
+<li>Read <a
+href="https://learn.microsoft.com/en-us/azure/active-directory/fundamentals/auth-ldap">LDAP
+authentication with Azure Active Directory</a>.</li>
+</ul></li>
+<li><a
+href="https://support.jumpcloud.com/s/article/using-jumpclouds-ldap-as-a-service1">JumpCloud</a></li>
+<li>Google Cloud supports LDAP with <a
+href="https://cloud.google.com/blog/products/identity-security/cloud-identity-now-provides-access-to-traditional-apps-with-secure-ldap">Cloud
+Identity</a> and G Suite
+<ul>
+<li><a
+href="https://support.google.com/cloudidentity/answer/9048516?hl=en">Secure
+LDAP Service</a></li>
+</ul></li>
+<li><a href="https://www.logonbox.com/">LogonBox</a></li>
+</ul>
+<h2 id="ldap-clients-tools-and-utilities">LDAP Clients, Tools and
+Utilities</h2>
+<ul>
+<li><a href="https://directory.apache.org/studio/">Apache Directory
+Studio</a></li>
+<li><a href="https://ldap.com/client-apis/">Client APIs</a> - List of
+LDAP libraries for languages from Ada to Swift on
+<code>ldap.com</code></li>
+<li><a href="https://github.com/hamano/lb">lb - LDAP benchmarking
+tool</a></li>
+<li><a href="https://github.com/mgale/ldapfs">ldapfs</a> - LDAP browsing
+via FUSE filesystem mount</li>
+<li><a href="https://ltb-project.org/doku.php">LDAP Tool Box
+project</a></li>
+<li><a href="https://www.port389.org/docs/389ds/scripts.html">OpenLDAP
+Helper Scripts</a></li>
+<li><a
+href="http://phpldapadmin.sourceforge.net/wiki/index.php/Main_Page">phpLDAPadmin</a>
+- Web-based LDAP browser to manage your LDAP server</li>
+<li><a href="http://www.phpldaptools.com/">PHPLdapTools</a></li>
+<li><a href="http://www.ldapexplorer.com/">Lex</a> - The LDAP Explorer -
+Windows only</li>
+</ul>
+<h2 id="ldap-pentesting">LDAP + Pentesting</h2>
+<ul>
+<li><a
+href="https://room362.com/post/2017/dump-laps-passwords-with-ldapsearch/">Dump
+LAPS passwords with ldapsearch</a></li>
+<li><a
+href="https://speakerdeck.com/ropnop/fun-with-ldap-kerberos-and-msrpc-in-ad-environments?slide=17">Fun
+with LDAP, Kerberos (and MSRPC) in AD Environments</a></li>
+<li><a
+href="https://cheatsheetseries.owasp.org/cheatsheets/LDAP_Injection_Prevention_Cheat_Sheet.html">LDAP
+Injection Prevention Cheat Sheet</a></li>
+<li><a
+href="https://www.blackhat.com/presentations/bh-europe-08/Alonso-Parada/Whitepaper/bh-eu-08-alonso-parada-WP.pdf">LDAP
+Injection &amp; Blind LDAP Injection in Web Applications</a></li>
+<li><a
+href="https://kennel209.gitbooks.io/owasp-testing-guide-v4/en/web_application_security_testing/testing_for_ldap_injection_otg-inpval-006.html">Testing
+for LDAP Injection (OTG-INPVAL-006)</a></li>
+<li><a
+href="https://www.sans.org/blog/understanding-and-exploiting-web-based-ldap/">Understanding
+and Exploiting Web-based LDAP</a></li>
+<li><a href="https://github.com/ropnop/windapsearch">windapsearch</a> -
+A tool that aims to automate some of the most useful LDAP queries a
+pentester would want to perform in an AD environment.</li>
+</ul>
+<h3 id="nse-scripts">NSE Scripts</h3>
+<ul>
+<li><a
+href="https://nmap.org/nsedoc/scripts/ldap-search.html">ldap-search</a></li>
+<li><a
+href="https://nmap.org/nsedoc/scripts/ldap-rootdse.html">ldap-rootdse</a></li>
+</ul>
+<h4 id="using-nse-scripts">Using NSE Scripts</h4>
+<ul>
+<li><a
+href="https://fadedlab.wordpress.com/2017/07/25/searching-ldap-using-nmaps-ldap-search-nse/">Searching
+LDAP using Nmap’s ldap-search.nse script</a> - Several practical
+applications</li>
+</ul>
+<h2 id="ldif">LDIF</h2>
+<p>LDIF is the LDAP Data Interchange Format. LDIF files are flat text
+files.</p>
+<ul>
+<li><a href="https://linux.die.net/man/1/dbgen.pl">dbgen.pl</a> -
+Perl</li>
+<li><a
+href="https://www.python-ldap.org/en/latest/reference/ldif.html">LDIF
+Parser and Generator</a> - Python</li>
+<li><a href="https://support.microsoft.com/en-us/help/555636">LDIFDE -
+Export / Import data from Active Directory - LDIFDE commands</a></li>
+<li><a
+href="https://gitlab.fusiondirectory.org/fusiondirectory/schema2ldif">schema2ldif:
+Tool for converting OpenLDAP-style schemas to the LDIF format</a> -
+Perl</li>
+</ul>
+<h2 id="rfcs">RFCs</h2>
+<ul>
+<li><a href="https://tools.ietf.org/html/rfc2849">RFC 2849</a> - The
+LDAP Data Interchange Format (LDIF) - Technical Specification</li>
+<li><a href="https://tools.ietf.org/html/rfc4510">RFC 4510</a> -
+Lightweight Directory Access Protocol (LDAP): Technical Specification
+Road Map</li>
+<li><a href="https://tools.ietf.org/html/rfc4515">RFC 4515</a> -
+Lightweight Directory Access Protocol (LDAP): String Representation of
+Search Filters</li>
+</ul>
+<h2 id="terminology">Terminology</h2>
+<p>These are some of the best available glossaries and other resources
+for learning more about LDAP terminology.</p>
+<ul>
+<li><a
+href="https://ldapwiki.com/wiki/Glossary%20Of%20LDAP%20And%20Directory%20Terminology">Glossary
+of LDAP and Directory Terminology</a></li>
+<li><a href="https://www.zytrax.com/books/ldap/ape/">LDAP - Object
+Classes and Attributes</a></li>
+<li><a
+href="https://docs.bmc.com/docs/fpsc121/ldap-attributes-and-associated-fields-495323340.html">LDAP
+attributes and associated fields</a></li>
+</ul>
+<h2 id="other-awesome-lists">Other Awesome Lists</h2>
+<ul>
+<li><a href="https://github.com/n1trux/awesome-sysadmin#ldap">LDAP
+section of awesome-sysadmin</a></li>
+<li><a
+href="https://github.com/decalage2/awesome-security-hardening#ldap">LDAP
+section of awesome security hardening</a></li>
+</ul>
+<h2 id="books">Books</h2>
+<ul>
+<li><a
+href="https://www.redbooks.ibm.com/redbooks/pdfs/sg244986.pdf">Understanding
+LDAP Design and Implementation</a> - Free PDF from IBM</li>
+</ul>
+<h2 id="conferences-and-education">Conferences and Education</h2>
+<ul>
+<li><a href="https://ldapcon.org/2019/">LDAPCon</a></li>
+<li><a
+href="https://www.youtube.com/channel/UCbozYVV-XTqzx-eTSI4I84A/videos">Videos
+from LDAPCon 2019</a></li>
+</ul>
+<h2 id="community-support-channels">Community Support Channels</h2>
+<ul>
+<li><a href="https://bugs.openldap.org/">OpenLDAP Issue Tracking
+System</a></li>
+<li><a href="https://lists.openldap.org/hyperkitty/">openldap.org
+mailing lists</a> - If you are reading this, you may wish to subscribe
+to <code>openldap-technical</code>.</li>
+<li><a href="https://reddit.com/r/ldap">/r/ldap</a> - The LDAP
+subreddit</li>
+</ul>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<ul>
+<li>JumpCloud has some <a
+href="https://github.com/TheJumpCloud/support/tree/master/scripts/authentication_examples/ldap">LDAP
+Authentication Examples</a> in a variety of languages</li>
+</ul>
+<h3 id="ldap-servers">LDAP Servers</h3>
+<blockquote>
+<p>LDAP servers available for testing…</p>
+</blockquote>
+<ul>
+<li><a
+href="https://www.forumsys.com/2022/05/10/online-ldap-test-server/">Online
+LDAP Test Server</a> - Creds for a read-only bind DN.</li>
+<li><a href="https://ldapwiki.com/wiki/Public%20LDAP%20Servers">Public
+LDAP Servers</a></li>
+</ul>
+<h3 id="guides-articles-papers-walkthroughs">Guides, Articles, Papers
+Walkthroughs</h3>
+<ul>
+<li><a href="http://www.selfadsi.org/index.htm">The LDAP Scripting
+Tutorial</a></li>
+<li><a
+href="https://support.google.com/cloudidentity/answer/6126589">Use LDAP
+search rules to synchronize data</a></li>
+<li><a
+href="https://medium.com/better-programming/ldap-docker-image-with-populated-users-3a5b4d090aa4">Build
+an OpenLDAP Docker Image That’s Populated With Users</a></li>
+<li><a href="http://pig.made-it.com/pig-adusers.html">Creating Active
+Directory Accounts: Using LDIF files and OpenLDAP tools</a></li>
+<li><a href="https://pub.nethence.com/server/active-directory">Hacking
+into an LDAP or Active Directory service</a> - “note: this isn’t
+pentesting but just gentle digging”</li>
+<li><a
+href="https://support.microsoft.com/en-us/help/4520412/2020-ldap-channel-binding-and-ldap-signing-requirements-for-windows">2020
+LDAP channel binding and LDAP signing requirements for Windows</a></li>
+<li><a
+href="https://www.tutorialspoint.com/ruby/ruby_ldap.htm">Interacting
+with an LDAP server using Ruby</a> - This is a little dated but would be
+great in conjunction with the containers noted above.</li>
+<li><a href="http://ruby-ldap.sourceforge.net/rdoc/">Full Ruby LDAP
+docs</a></li>
+</ul>
+<h2 id="courses">Courses</h2>
+<ul>
+<li><a href="https://university.jumpcloud.com/collections">JumpCloud
+University</a></li>
+</ul>
+<h3 id="notes-from-the-field">Notes from the Field</h3>
+<ul>
+<li><a
+href="https://www.cs.rug.nl/~jurjen/ApprenticesNotes/ldapsearch_ad_query.html">Querying
+AD with ldapsearch: Linux Authenticating against Active
+Directory</a></li>
+</ul>
+<h3 id="vendor-documentation">Vendor Documentation</h3>
+<ul>
+<li><a
+href="https://docs.jamf.com/technical-articles/LDAP_Server_Connections_in_Jamf_Pro.html?hl=ldap">LDAP
+Server Connections in JAMF Pro</a></li>
+</ul>
+</body>
+</html>
